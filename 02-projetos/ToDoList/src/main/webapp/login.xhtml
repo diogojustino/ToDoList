@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    </h:head>
+    <h:body >
+        <div class="container">
+            <h:messages  />
+            <h:form id="formLogin">
+                <h1>Bem vindo(a) ao To Do - List.</h1>
+                <h:panelGrid id="gridLoginSenha" columns="2">
+                  <h:outputText value="Login:"/>
+                  <h:inputText id="login" value="#{loginBean.login}"/>
+
+                  <h:outputText value="Senha:"/>
+                  <h:inputSecret id="senha" value="#{loginBean.senha}"/>
+                   <h:commandButton id="botao" value="Entrar" action="#{loginBean.logar}"/>
+                    <h:commandLink value="Cadastre-se" styleClass="cadastro" action="/cadastro.xhtml?faces-redirect=true"/>
+                </h:panelGrid>
+               
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
